@@ -26,6 +26,17 @@ namespace LinkedList
                 this.head = newnode;
             }
         }
+        public void DeleteAtFirst()
+        {
+            if(this.head==null)
+            {
+                Console.WriteLine("Linkedlist is empty");
+            }
+            else
+            {
+                this.head = this.head.next;
+            }
+        }
         public void DisplayList()
         {
             int count=0;

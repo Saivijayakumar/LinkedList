@@ -19,6 +19,10 @@ namespace LinkedList
             linked.InsertAtFirst(70);
             linked.InsertAtFirst(30);
             linked.InsertAtFirst(56);
+            Console.WriteLine("\nBefore Deleteing ");
+            linked.DisplayList();
+            Console.WriteLine("\nAfter Deleteing ");
+            linked.DeleteAtFirst();
             linked.DisplayList();
             Console.ReadLine();
         }
