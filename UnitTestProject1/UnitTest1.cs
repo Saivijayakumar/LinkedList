@@ -17,12 +17,12 @@ namespace UnitTestProject1
         public void TestMethod1()
         {
             //Arange
-            linkedList.InsertAtLast(30);
-            linkedList.InsertAtLast(59);
             linkedList.InsertAtLast(22);
-            int actual = 22;
+            linkedList.InsertAtLast(59);
+            linkedList.InsertAtLast(30);
+            int actual = 30;
             //Act
-            int expected = linkedList.search(22);//return 22
+            int expected = linkedList.search(30);//return 30
             //Assert
             Assert.AreEqual(actual, expected);
         }
