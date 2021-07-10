@@ -26,15 +26,23 @@ namespace LinkedList
                 this.head = newnode;
             }
         }
-        public void DeleteAtFirst()
+        public void PopLast()
         {
-            if(this.head==null)
+            Node previous = null;
+            Node temp = this.head;
+            if(head == null)
             {
-                Console.WriteLine("Linkedlist is empty");
+                Console.WriteLine("LinkedList Is Empty");
             }
             else
             {
-                this.head = this.head.next;
+                while (temp.next != null)
+                {
+                    previous = temp;
+                    temp = temp.next;
+                }
+                this.tail = previous;
+                previous.next = null;
             }
         }
         public void DisplayList()
