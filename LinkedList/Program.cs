@@ -19,6 +19,7 @@ namespace LinkedList
             linked.InsertAtLast(56);
             linked.InsertAtLast(30);
             linked.InsertAtLast(70);
+            linked.search(70);
             linked.DisplayList();
             Console.ReadLine();
         }
