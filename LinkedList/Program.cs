@@ -17,8 +17,11 @@ namespace LinkedList
             Console.WriteLine("\t\t---------->Welcome To LinkedList<--------------\n");
             LinkedListMethods linked = new LinkedListMethods();
             linked.InsertAtFirst(70);
-            linked.InsertAtFirst(30);
             linked.InsertAtFirst(56);
+            Console.WriteLine("\nBefore Inser the linkedlist contains");
+            linked.DisplayList();
+            Console.WriteLine("\nAfter Inser the linkedlist contains");
+            linked.InsertNode(30);
             linked.DisplayList();
             Console.ReadLine();
         }

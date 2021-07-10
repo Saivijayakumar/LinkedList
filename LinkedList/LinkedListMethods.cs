@@ -26,6 +26,20 @@ namespace LinkedList
                 this.head = newnode;
             }
         }
+        //This will work for this UC only.
+        public void InsertNode(int data)
+        {
+            Node newnode = new Node(data);
+            if(this.head == null)
+            {
+                Console.WriteLine("The List is empty");
+            }
+            else
+            {
+                this.head.next = newnode;
+                newnode.next = this.tail;
+            }
+        }
         public void DisplayList()
         {
             int count=0;
