@@ -11,21 +11,19 @@ namespace LinkedList
         //Creating Both Head and Tail reference
         public Node head;
         public Node tail;
-        public void InsertAtLast(int data)
+        public void InsertAtFirst(int data)
         {
             Node newnode = new Node(data);
-            if(head==null)
+            if(this.head == null)
             {
-                //If the list is empty then new node will assign to head and tail
                 this.head = this.tail = newnode;
-                
             }
             else
             {
-                //linking newnode to tail
-                this.tail.next = newnode;
-                //changeing the reference
-                this.tail = newnode;
+                //linking newnode to head
+                newnode.next = this.head;
+                //Updating head pointer
+                this.head = newnode;
             }
         }
         public void DisplayList()

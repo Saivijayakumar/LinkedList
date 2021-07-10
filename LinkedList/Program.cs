@@ -16,9 +16,9 @@ namespace LinkedList
         {
             Console.WriteLine("\t\t---------->Welcome To LinkedList<--------------\n");
             LinkedListMethods linked = new LinkedListMethods();
-            linked.InsertAtLast(56);
-            linked.InsertAtLast(30);
-            linked.InsertAtLast(70);
+            linked.InsertAtFirst(70);
+            linked.InsertAtFirst(30);
+            linked.InsertAtFirst(56);
             linked.DisplayList();
             Console.ReadLine();
         }
