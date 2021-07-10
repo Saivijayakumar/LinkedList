@@ -26,7 +26,7 @@ namespace LinkedList
                 this.head = newnode;
             }
         }
-        public void DeleteAtFirst()
+        public void Pop()
         {
             if(this.head==null)
             {

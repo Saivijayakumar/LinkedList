@@ -22,7 +22,7 @@ namespace LinkedList
             Console.WriteLine("\nBefore Deleteing ");
             linked.DisplayList();
             Console.WriteLine("\nAfter Deleteing ");
-            linked.DeleteAtFirst();
+            linked.Pop();
             linked.DisplayList();
             Console.ReadLine();
         }
