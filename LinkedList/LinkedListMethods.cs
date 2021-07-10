@@ -16,12 +16,15 @@ namespace LinkedList
             Node newnode = new Node(data);
             if(head==null)
             {
+                //If the list is empty then new node will assign to head and tail
                 this.head = this.tail = newnode;
                 
             }
             else
             {
+                //linking newnode to tail
                 this.tail.next = newnode;
+                //changeing the reference
                 this.tail = newnode;
             }
         }
