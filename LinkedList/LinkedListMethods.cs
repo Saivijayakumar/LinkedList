@@ -18,7 +18,6 @@ namespace LinkedList
             {
                 //If the list is empty then new node will assign to head and tail
                 this.head = this.tail = newnode;
-                
             }
             else
             {
