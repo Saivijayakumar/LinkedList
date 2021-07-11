@@ -26,6 +26,7 @@ namespace UnitTestProject1
             //Assert
             Assert.AreEqual(actual, expected);
         }
+        [TestMethod]
         public void TestMethod2()
         {
             //Arange
@@ -38,6 +39,7 @@ namespace UnitTestProject1
             //Assert
             Assert.AreEqual(actual, expected);
         }
+        [TestMethod]
         public void TestMethod3()
         {
             //Arange
