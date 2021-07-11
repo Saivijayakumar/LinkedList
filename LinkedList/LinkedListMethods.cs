@@ -11,25 +11,52 @@ namespace LinkedList
         //Creating Both Head and Tail reference
         public Node head;
         public Node tail;
-        public void InsertAtLast(int data)
+        //For storing user values
+        public List<int> array = new List<int>();
+        public void InsertForSort(int data)
         {
+            array.Add(data);
             Node newnode = new Node(data);
-            if(head==null)
+            if(head == null)
             {
-                //If the list is empty then new node will assign to head and tail
                 this.head = this.tail = newnode;
-                
             }
             else
             {
-                //linking newnode to tail
-                this.tail.next = newnode;
-                //changeing the reference
-                this.tail = newnode;
+                Node previous = null;
+                Node current = this.head;
+                while(current != null && current.data < data)
+                {
+                    previous = current;
+                    current = current.next;
+                }
+                if(current == this.head)
+                {
+                    //Insert At Start logic
+                    newnode.next = current;
+                    this.head = newnode;//update head
+                }
+                else
+                {
+                    //Insert At Middle and Last logic
+                    newnode.next = current;
+                    previous.next = newnode;
+                    this.tail = newnode;//update tail
+                }
+            }
+        }
+        //Displaying user values 
+        public void ValueAre()
+        {
+            Console.WriteLine("The values given by user");
+            foreach(int i in array)
+            {
+                Console.Write(i+" , ");
             }
         }
         public void DisplayList()
         {
+            Console.WriteLine("\nValues  In Linkedlist Now In Assending Order ");
             int count=0;
             Node temp = this.head;
             while(temp!=null)

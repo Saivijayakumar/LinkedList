@@ -16,9 +16,11 @@ namespace LinkedList
         {
             Console.WriteLine("\t\t---------->Welcome To LinkedList<--------------\n");
             LinkedListMethods linked = new LinkedListMethods();
-            linked.InsertAtLast(56);
-            linked.InsertAtLast(30);
-            linked.InsertAtLast(70);
+            linked.InsertForSort(56);
+            linked.InsertForSort(30);
+            linked.InsertForSort(40);
+            linked.InsertForSort(70);
+            linked.ValueAre();
             linked.DisplayList();
             Console.ReadLine();
         }
