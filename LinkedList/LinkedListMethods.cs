@@ -14,10 +14,10 @@ namespace LinkedList
         public void InsertAtLast(int data)
         {
             Node newnode = new Node(data);
-            if(head==null)
+            if (head == null)
             {
                 //If the list is empty then new node will assign to head and tail
-                this.head = this.tail = newnode;   
+                this.head = this.tail = newnode;
             }
             else
             {
@@ -27,19 +27,19 @@ namespace LinkedList
                 this.tail = newnode;
             }
         }
-        public int  search(int data)
+        public int search(int data)
         {
             Node temp = this.head;
-            if(this.head == null)
+            if (this.head == null)
             {
                 Console.WriteLine("LinkedList is empty");
                 return default;
             }
             else
             {
-                while(temp != null)
+                while (temp != null)
                 {
-                    if(temp.data == data)
+                    if (temp.data == data)
                     {
                         Console.WriteLine("The value {0} is Present in Linked List", data);
                         return data;
@@ -50,16 +50,41 @@ namespace LinkedList
                 return default;
             }
         }
+        //here we taking two parameters one for value and other for reference
+        public void InsertAtSpecifiedposition(int reference, int data)
+        {
+            Node newnode = new Node(data);
+            Node temp = this.head;
+            if (this.head == null)
+            {
+                this.head = this.tail = newnode;
+            }
+            else
+            {
+                while (temp != null)
+                {
+                    if (temp.data == reference)
+                    {
+                        newnode.next = temp.next;
+                        temp.next = newnode;
+                        break;
+                    }
+                    temp = temp.next;
+                }
+            }
+        }
         public void DisplayList()
         {
-            int count=0;
+            int count = 0;
             Node temp = this.head;
-            while(temp!=null)
+            while (temp != null)
             {
-                Console.WriteLine("At {0} Index We Have {1} value",count,temp.data);
+                Console.WriteLine("At {0} Index We Have {1} value", count, temp.data);
                 count++;
                 temp = temp.next;
             }
         }
     }
 }
+        
+

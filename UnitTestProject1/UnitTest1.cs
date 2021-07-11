@@ -17,36 +17,29 @@ namespace UnitTestProject1
         public void TestMethod1()
         {
             //Arange
-            linkedList.InsertAtLast(22);
-            linkedList.InsertAtLast(59);
+            linkedList.InsertAtLast(56);
             linkedList.InsertAtLast(30);
+            linkedList.InsertAtLast(70);
             int actual = 30;
             //Act
+            linkedList.InsertAtSpecifiedposition(30, 40);
             int expected = linkedList.search(30);//return 30
             //Assert
             Assert.AreEqual(actual, expected);
         }
+        [TestMethod]
         public void TestMethod2()
         {
             //Arange
-            linkedList.InsertAtLast(3);
-            linkedList.InsertAtLast(9);
-            linkedList.InsertAtLast(2);
-            int actual = 0;
+            linkedList.InsertAtLast(56);
+            linkedList.InsertAtLast(30);
+            linkedList.InsertAtLast(70);
+            int actual = 40;
             //Act
-            int expected = linkedList.search(50);//return 0 
+            linkedList.InsertAtSpecifiedposition(30, 40);
+            int expected = linkedList.search(40);//return 40
             //Assert
             Assert.AreEqual(actual, expected);
         }
-        public void TestMethod3()
-        {
-            //Arange
-            int actual = 0;
-            //Act
-            int expected = linkedList.search(22);//return 0 
-            //Assert
-            Assert.AreEqual(actual, expected);
-        }
-
     }
 }
