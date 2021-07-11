@@ -18,8 +18,10 @@ namespace LinkedList
             LinkedListMethods linked = new LinkedListMethods();
             linked.InsertAtLast(56);
             linked.InsertAtLast(30);
+            linked.InsertAtLast(40);
             linked.InsertAtLast(70);
-            linked.search(70);
+            linked.DeleteAtSpecifiedPosition(40);
+            Console.WriteLine("The length of Linkedlist is "+ linked.LinkedlistCount());
             linked.DisplayList();
             Console.ReadLine();
         }

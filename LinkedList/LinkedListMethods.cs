@@ -27,13 +27,14 @@ namespace LinkedList
                 this.tail = newnode;
             }
         }
-        public int  search(int data)
+        public bool DeleteAtSpecifiedPosition(int data)
         {
+            Node previous = null;
             Node temp = this.head;
-            if(this.head == null)
+            if (this.head == null)
             {
-                Console.WriteLine("LinkedList is empty");
-                return default;
+                Console.WriteLine("Linkedlist is empty");
+                return false;
             }
             else
             {
@@ -41,14 +42,26 @@ namespace LinkedList
                 {
                     if(temp.data == data)
                     {
-                        Console.WriteLine("The value {0} is Present in Linked List", data);
-                        return data;
+                        previous.next = temp.next;
+                        temp.next = null;
+                        return true;
                     }
+                    previous = temp;
                     temp = temp.next;
                 }
-                Console.WriteLine("The value {0} is Present in Linked List", data);
-                return default;
+                return false;
             }
+        }
+        public int LinkedlistCount()
+        {
+            int count = 0;
+            Node temp = this.head;
+            while(temp!=null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            return count;
         }
         public void DisplayList()
         {
